@@ -1,0 +1,19 @@
+{
+  "name": "grpc-node-typescript-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "npx ts-node src/server/server.ts",
+    "start:client": "npx ts-node src/client/client.ts",
+    "proto:build": "cd proto; buf build; cd ..",
+    "codegen:buf": "cd proto; buf generate; cd .."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.8.0",
+    "ts-proto": "^1.136.1"
+  }
+}

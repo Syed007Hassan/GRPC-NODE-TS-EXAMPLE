@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package authPackage;
+
+service AuthService {
+    rpc login(LoginRequest) returns (LoginResult);
+}
+
+enum LoginCode {
+    SUCCESS = 0;
+    FAIL = 1;
+};
+
+message LoginResult {
+    LoginCode loginCode = 1;
+    optional string token = 2;
+}
+
+message LoginRequest {
+    string username = 1;
+    string password = 2;
+}
